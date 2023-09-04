@@ -112,13 +112,9 @@ mod ser;
 pub mod binary_heap;
 #[cfg(feature = "defmt-impl")]
 mod defmt;
-#[cfg(all(has_cas, feature = "cas"))]
-pub mod mpmc;
 #[cfg(any(arm_llsc, target_arch = "x86"))]
 pub mod pool;
 pub mod sorted_linked_list;
-#[cfg(has_atomics)]
-pub mod spsc;
 
 #[cfg(feature = "ufmt-impl")]
 mod ufmt;
